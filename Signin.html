@@ -15,74 +15,7 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBdVtYrGsAmvLW-GBnTABMIo2H3IOQlFpk",
-    authDomain: "quizifyprj.firebaseapp.com",
-    projectId: "quizifyprj",
-    storageBucket: "quizifyprj.appspot.com",
-    messagingSenderId: "488187471912",
-    appId: "1:488187471912:web:ef91a04b0fff0655362d1d"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  import {getDatabase, ref, set, child, get, update, remove}
-        from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
-
-        const db = getDatabase();
-
-</script>
-<script>
-  const username = document.getElementById('username-a30d');
-        const pass = document.getElementById('password-a30d');
-        const submit = document.getElementById('sub_btn');
-
-        function AuthenticateUser(){
-            const dbref = ref(db);
-            
-            get(child(dbref, "UserList/" + username.value)).then((snapshot)=> {
-                if(snapshot.exists()){
-                    let dbpass = decPass(snapshot.val().password);
-                    if(dbpass == pass.value){
-                        login(snapshot.val());
-                    }
-                    else{
-                        alert("User does not exist");
-                    }
-                }
-                else{
-                    alert("Username or password is invalid")
-                }
-            });
-        }
-
-        function decPass(dbpass){
-            var passEnc = CryptoJS.AES.decrypt(dbpass, pass.value);
-            return passEnc.toString(CryptoJS.enc.Utf8);
-        }
-
-        function login(user) {
-            let keepLoginIn = document.getElementById("checkbox-a30d").checked;
-            if(!keepLoginIn){
-                sessionStorage.setItem('user', JSON.stringify(user));
-                window.location="Home-.html";
-            }
-            else{
-                localStorage.setItem('keepLoggedIn', 'yes');
-                localStorage.setItem('user', JSON.stringify(user));
-                window.location= 'Home-.html';
-            }
-        }
-
-        submit.addEventListener('click', AuthenticateUser);
-</script>
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -106,7 +39,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Home</a>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home-.html" style="padding: 10px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signin.html" style="padding: 10px;">Sign In</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signup.html" style="padding: 10px;">Sign Up</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;">Ranking</a>
@@ -189,5 +122,74 @@
         <span>HTML Website Builder</span>
       </a>. 
     </section>
-  
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBYH6QBwGZEwt88OTLWh3Z9yP4S44c7iGU",
+        authDomain: "almostdone-66212.firebaseapp.com",
+        databaseURL: "https://almostdone-66212-default-rtdb.firebaseio.com",
+        projectId: "almostdone-66212",
+        storageBucket: "almostdone-66212.appspot.com",
+        messagingSenderId: "722717516267",
+        appId: "1:722717516267:web:6d03c2f782032edfe139ae",
+        measurementId: "G-MHMNP1YLBR"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+      import {getDatabase, ref, set, child, get, update, remove}
+            from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    
+    
+            const username = document.getElementById('username-a30d');
+            const pass = document.getElementById('password-a30d');
+            const submit = document.getElementById('sub_btn');
+    
+            function AuthenticateUser(){
+                const dbref = ref(db);
+                
+                get(child(dbref, "UserList/" + username.value)).then((snapshot)=> {
+                    if(snapshot.exists()){
+                        let dbpass = decPass(snapshot.val().password);
+                        if(dbpass == pass.value){
+                            login(snapshot.val());
+                        }
+                        else{
+                            alert("User does not exist");
+                        }
+                    }
+                    else{
+                        alert("Username or password is invalid")
+                    }
+                });
+            }
+    
+            function decPass(dbpass){
+                var passEnc = CryptoJS.AES.decrypt(dbpass, pass.value);
+                return passEnc.toString(CryptoJS.enc.Utf8);
+            }
+    
+            function login(user) {
+                let keepLoginIn = document.getElementById("checkbox-a30d").checked;
+                if(!keepLoginIn){
+                    sessionStorage.setItem('user', JSON.stringify(user));
+                    window.location="Home-.html";
+                }
+                else{
+                    localStorage.setItem('keepLoggedIn', 'yes');
+                    localStorage.setItem('user', JSON.stringify(user));
+                    window.location= 'Home-.html';
+                }
+            }
+    
+            submit.addEventListener('click', AuthenticateUser);
+    
+    
+    </script>
 </body></html>

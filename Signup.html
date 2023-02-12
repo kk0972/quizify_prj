@@ -7,31 +7,8 @@
     <title>Signup</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Signup.css" media="screen">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBdVtYrGsAmvLW-GBnTABMIo2H3IOQlFpk",
-    authDomain: "quizifyprj.firebaseapp.com",
-    projectId: "quizifyprj",
-    storageBucket: "quizifyprj.appspot.com",
-    messagingSenderId: "488187471912",
-    appId: "1:488187471912:web:ef91a04b0fff0655362d1d"
-  };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  import {getDatabase, ref, set, child, get, update, remove}
-        from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
-
-        const db = getDatabase();
-
-</script>
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.2.4, nicepage.com">
@@ -62,7 +39,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Home</a>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home-.html  " style="padding: 10px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signin.html" style="padding: 10px;">Sign In</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signup.html" style="padding: 10px;">Sign Up</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;">Ranking</a>
@@ -90,7 +67,7 @@
     <section class="u-clearfix u-section-1" id="sec-8dd5">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-login-control u-form-1">
-          <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
+          <form class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
             <div class="u-form-group u-form-name u-form-group-1">
               <label for="name-7358" class="u-label">Name</label>
               <input type="text" placeholder="Enter your Name" id="name-a30d" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
@@ -109,20 +86,24 @@
             </div>
             <div class="u-form-group u-form-password">
               <label for="password-a277" class="u-label">Password *</label>
-              <input type="text" placeholder="Enter your Password" id="password-a30d" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="password" placeholder="Enter your Password" id="password-a30d" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" >
             </div>
             <div class="u-form-checkbox u-form-group">
               <input type="checkbox" id="checkbox-a277" name="remember" value="On" required="required">
               <label for="checkbox-a277" class="u-label">Are you human?</label>
             </div>
-            <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-submit u-button-style u-btn-1">SIGN UP</a>
-              <input type="submit" value="submit" class="u-form-control-hidden" id="sub_btn">
+            <div class="u-align-left u-form-group u-form-submit" >
+              <a href="#" class="u-btn u-btn-submit u-button-style u-btn-1" id="sub_btn">SIGN UP</a>
+            
             </div>
             <input type="hidden" name="formServices" value="30e117af5e6b466d77f41d68a9dcf164">
           </form>
         </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+      
+      
     </section>
     
     
@@ -140,6 +121,6 @@
         <span>Website Builder Software</span>
       </a>. 
     </section>
-    <script src="./Signup.js"></script>
-  
+    
+    <script src="./Signup.js" type="module"></script>
 </body></html>

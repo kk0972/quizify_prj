@@ -1,11 +1,35 @@
-const usrname = document.getElementById('name-a30d');
-        const username = document.getElementById('username-a30d');
-        const pass = document.getElementById('password-a30d');
-        const submit = document.getElementById('sub_btn');
-        const email = document.getElementById('email-a30d');
-        const phone = document.getElementById('phone-a30d');
 
-        function isEmptyOrSpace(str) 
+// Import the functions you need from the SDKs you need
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBYH6QBwGZEwt88OTLWh3Z9yP4S44c7iGU",
+  authDomain: "almostdone-66212.firebaseapp.com",
+  projectId: "almostdone-66212",
+  storageBucket: "almostdone-66212.appspot.com",
+  messagingSenderId: "722717516267",
+  appId: "1:722717516267:web:6d03c2f782032edfe139ae"
+  
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+import {getDatabase, ref, set, child, get, update, remove}
+from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+const db = getDatabase();
+const usrname = document.getElementById('name-a30d');
+const username = document.getElementById('username-a30d');
+const pass = document.getElementById('password-a30d');
+var submitButtn = document.getElementById('sub_btn');
+const email = document.getElementById('email-a30d');
+const phone = document.getElementById('phone-a30d');
+
+function isEmptyOrSpace(str) 
         {
             return str === null || str.match(/^ *$/) !== null;
         }
@@ -43,12 +67,12 @@ const usrname = document.getElementById('name-a30d');
             }
             return true;
         }
-
+        const dbRef = ref(db);
         function RegisterUser () {
             if(!Validation()){
                 return;
             };
-            const dbRef = ref(db);
+            
             get(child(dbRef, "UserList/" + username.value)).then((snapshot)=> {
                 if(snapshot.exists()){
                     alert("Account already exist");
@@ -60,7 +84,6 @@ const usrname = document.getElementById('name-a30d');
                         email: email.value,
                         phone: phone.value,
                         username: username.value,
-                        role: 1,
                         password: encPass()
                     })
                     .then(()=> {
@@ -76,6 +99,4 @@ const usrname = document.getElementById('name-a30d');
             var passEnc = CryptoJS.AES.encrypt(pass.value, pass.value);
             return passEnc.toString();
         }
-
-        submit.addEventListener('click', RegisterUser);
-        
+        submitButtn.addEventListener('click', RegisterUser);

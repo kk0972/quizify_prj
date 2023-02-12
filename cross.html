@@ -1,0 +1,322 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<meta name="author" content="Brent Woods & Arvie Lowe Jr">
+<title>Crossword Puzzle</title>
+<link rel="stylesheet" href="cascade.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#clues").click(function(){
+$('.popupclue').fadeIn();	
+});
+$(".close").click(function(){
+$('.popupclue').fadeOut();
+});
+$('.mycros').mousedown(function(){
+$('.popupclue').fadeOut();
+});
+function testcase(){
+if($("#case1").val()!="G"){
+$("#case1").css("color","red");
+}}
+	testcase();
+$("input").mouseleave(function(){
+if($("#case1").val()!="G"){
+$("#case1").css("color","red");
+}
+else if($("#case1").val()=="G"){
+$("#case1").css("color","black");	
+}
+if($("#case2").val()!="R"){
+$("#case2").css("color","red");
+}
+else if($("#case2").val()=="R"){
+$("#case2").css("color","black");	
+}
+if($("#case3").val()!="N"){
+$("#case3").css("color","red");
+}
+else if($("#case3").val()=="N"){
+$("#case3").css("color","black");	
+}
+if($("#case4").val()!="D"){
+$("#case4").css("color","red");
+}
+else if($("#case4").val()=="D"){
+$("#case4").css("color","black");	
+}
+if($("#case5").val()!="I"){
+$("#case5").css("color","red");
+}
+else if($("#case5").val()=="I"){
+$("#case5").css("color","black");	
+}
+if($("#case6").val()!="E"){
+$("#case6").css("color","red");
+}
+else if($("#case6").val()=="E"){
+$("#case6").css("color","black");	
+}
+if($("#case7").val()!="L"){
+$("#case7").css("color","red");
+}
+else if($("#case7").val()=="L"){
+$("#case7").css("color","black");	
+}
+if($("#case8").val()!="L"){
+$("#case8").css("color","red");
+}
+else if($("#case8").val()=="L"){
+$("#case8").css("color","black");	
+}
+if($("#case9").val()!="O"){
+$("#case9").css("color","red");
+}
+else if($("#case9").val()=="O"){
+$("#case9").css("color","black");	
+}
+if($("#case10").val()!="F"){
+$("#case10").css("color","red");
+}
+else if($("#case10").val()=="F"){
+$("#case10").css("color","black");	
+}
+if($("#case11").val()!="I"){
+$("#case11").css("color","red");
+}
+else if($("#case11").val()=="I"){
+$("#case11").css("color","black");	
+}
+if($("#case12").val()!="M"){
+$("#case12").css("color","red");
+}
+else if($("#case12").val()=="M"){
+$("#case12").css("color","black");	
+}
+if($("#case13").val()!="A"){
+$("#case13").css("color","red");
+}
+else if($("#case13").val()=="A"){
+$("#case13").css("color","black");	
+}
+if($("#case14").val()!="R"){
+$("#case14").css("color","red");
+}
+else if($("#case14").val()=="R"){
+$("#case14").css("color","black");	
+}
+if($("#case15").val()!="P"){
+$("#case15").css("color","red");
+}
+else if($("#case15").val()=="P"){
+$("#case15").css("color","black");	
+}
+if($("#case16").val()!="A"){
+$("#case16").css("color","red");
+}
+else if($("#case16").val()=="A"){
+$("#case16").css("color","black");	
+}
+if($("#case17").val()!="I"){
+$("#case17").css("color","red");
+}
+else if($("#case17").val()=="I"){
+$("#case17").css("color","black");	
+}
+if($("#case18").val()!="L"){
+$("#case18").css("color","red");
+}
+else if($("#case18").val()=="L"){
+$("#case18").css("color","black");	
+}
+if($("#case19").val()!="P"){
+$("#case19").css("color","red");
+}
+else if($("#case19").val()=="P"){
+$("#case19").css("color","black");	
+}
+if($("#case20").val()!="S"){
+$("#case20").css("color","red");
+}
+else if($("#case20").val()=="S"){
+$("#case20").css("color","black");	
+}
+if($("#case21").val()!="N"){
+$("#case21").css("color","red");
+}
+else if($("#case21").val()=="N"){
+$("#case21").css("color","black");	
+}
+if($("#case22").val()!="K"){
+$("#case22").css("color","red");
+}
+else if($("#case22").val()=="K"){
+$("#case22").css("color","black");	
+}
+if($("#case23").val()!="A"){
+$("#case23").css("color","red");
+}
+else if($("#case23").val()=="A"){
+$("#case23").css("color","black");	
+}
+if($("#case24").val()!="T"){
+$("#case24").css("color","red");
+}
+else if($("#case24").val()=="T"){
+$("#case24").css("color","black");	
+}
+if($("#case25").val()!="E"){
+$("#case25").css("color","red");
+}
+else if($("#case25").val()=="E"){
+$("#case25").css("color","black");	
+}
+if($("#case26").val()!="M"){
+$("#case26").css("color","red");
+}
+else if($("#case26").val()=="M"){
+$("#case26").css("color","black");	
+}
+if($("#case27").val()!="L"){
+$("#case27").css("color","red");
+}
+else if($("#case27").val()=="L"){
+$("#case27").css("color","black");	
+}
+if($("#case28").val()!="S"){
+$("#case28").css("color","red");
+}
+else if($("#case28").val()=="S"){
+$("#case28").css("color","black");	
+}
+});
+$("#Resolve").click(function(){
+$("#case1").val("G");
+$("#case2").val("R");
+$("#case3").val("N");
+$("#case4").val("D");
+$("#case5").val("I");
+$("#case6").val("E");
+$("#case7").val("L");
+$("#case8").val("L");
+$("#case9").val("O");
+$("#case10").val("F");
+$("#case11").val("I");
+$("#case12").val("M");
+$("#case13").val("A");
+$("#case14").val("R");
+$("#case15").val("P");
+$("#case16").val("A");
+$("#case17").val("I");
+$("#case18").val("L");
+$("#case19").val("P");
+$("#case20").val("S");
+$("#case21").val("N");
+$("#case22").val("K");
+$("#case23").val("A");
+$("#case24").val("T");
+$("#case25").val("E");
+$("#case26").val("M");
+$("#case27").val("L");
+$("#case28").val("S");
+$("input").css("color","black");
+});
+$("#solution").click(function(){
+if(($("#case1").val()=="G")&&($("#case2").val()=="R")&&($("#case3").val()=="N")&&($("#case4").val()=="D")&&($("#case5").val()=="I")&&($("#case6").val()=="E")&&($("#case7").val()=="L")&&($("#case8").val()=="L")&&($("#case9").val()=="O")&&($("#case10").val()=="F")&&($("#case11").val()=="I")&&($("#case12").val()=="M")&&($("#case13").val()=="A")&&($("#case14").val()=="R")&&($("#case15").val()=="P")&&($("#case16").val()=="A")&&($("#case17").val()=="I")&&($("#case18").val()=="L")&&($("#case19").val()=="P")&&($("#case20").val()=="S")&&($("#case21").val()=="N")&&($("#case22").val()=="K")&&($("#case23").val()=="A")&&($("#case23").val()=="A")&&($("#case24").val()=="T")&&($("#case25").val()=="E")&&($("#case26").val()=="M")&&($("#case27").val()=="L")&&($("#case28").val()=="S")){
+  $(".bravo").css("visibility","visible"); 
+    $(".bravo").attr("id","bravo");
+   }
+});
+});
+</script>
+</head>
+<body>
+<div class="mycros">
+	<div class="content">
+<p class="one">1</p>
+<p class="two">2</p>
+<p class="three">3</p>
+<p class="four">4</p>
+<p class="five">5</p>
+<p class="six">6</p>
+<form>
+<div id="dix">
+<input class="case1" type="text" id="case1" name="case1" value="G"/>
+<input type="text" id="case2" name="case2"/>
+<input type="text" id="case3" name="case3"/>
+<input type="text" id="case4" name="case4"/>
+<input type="text" id="case5" name="case5" value="I"/>
+<input type="text" id="case6" name="case6"/>
+<input type="text" id="case7" name="case7"/>
+<input type="text" id="case8" name="case8" value="L"/>
+<input type="text" id="case9" name="case9" />
+<input type="text" id="case10" name="case10"/>
+<input type="text" id="case11" name="case11"/>
+	</div>
+<div id="dix2">
+<input type="text" id="case12" name="case12"/>
+<input type="text" id="case13" name="case13"/>
+<input type="text" id="case14" name="case14" value="R"/>
+<input type="text" id="case15" name="case15"/>
+<input type="text" id="case16" name="case16"/>
+<input type="text" id="case17" name="case17" value="I"/>
+<input type="text" id="case18" name="case18"/>
+	</div>
+<input type="text" id="case19" name="case19"/>
+<input type="text" id="case20" name="case20" value="S"/>
+<input type="text" id="case21" name="case21"/>
+<input type="text" id="case22" name="case22"/>
+<input type="text" id="case23" name="case23" value="A"/>
+<input type="text" id="case24" name="case24"/>
+<input type="text" id="case25" name="case25"/>
+<input type="text" id="case26" name="case26"/>
+<input type="text" id="case27" name="case27"/>
+<input type="text" id="case28" name="case28" value="S"/>
+</form>
+			</div>
+
+<button id="solution" >
+Resolve</button>
+<br/>
+<button id="Resolve">
+Solution	
+</button><br/>
+<button id="clues">
+Words clues
+</button>
+</div>
+<div class="popupclue">
+	<div class="popupcontent">
+<ul class="horizontal">
+<li><h2>Horizontal</h2></li>
+<li>3. a male given name/a female given name</li>	
+<li>4.any extensive sloping walk or passageway.</li>	
+<li>5.to form (the fibers of any material) into thread or yarn</li>
+<li>6.to form (the fibers of any material) into thread or yarn</li>
+</ul>
+<ul>
+<li><h2>Vertical</h2></li>
+<li>1.to reduce to fine particles, as by pounding or crushing; bray, triturate, or pulverize.</li>
+<li>2.to turn over, especially with a short rapid gesture</li>	
+<li>4.a bar of wood or metal fixed horizontally for any of various purposes, as for a support, barrier, fence, or railing.</li>
+<li>5.to glide or propel oneself over ice, the ground, etc.</li>
+</ul>
+<div class="close">
+	 <i class="far fa-window-close"></i>
+</div>
+	</div>
+</div>
+<div class="bravo">
+<h2>Good job ! Bravo</h2>
+</div>	
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,387 @@
+body{
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+overflow-y: hidden,
+}
+input[type="text"]{
+width: 1.5rem;
+height: 1.5rem;
+text-transform: uppercase;
+border: 2px solid green;
+text-align: center;
+font-weight: 900;
+}
+form{
+opacity: 0.6;
+justify-content: center;
+position: relative;
+top: -92.5px;
+}
+.mycros{
+width: 100%;
+height: 120%;
+/* background-image:url(v15.png); */
+background-size: cover;
+background-repeat:no-repeat;
+background-position: center;
+}
+#case1{
+position: relative;
+top: 12.6rem;
+left: 70rem;
+opacity: 0.8;
+}
+#case2{
+position: relative;
+top: 14.05rem;
+left: 68.25rem;
+}
+#case3{
+position: relative;
+top: 16.97rem;
+left: 66.5rem;
+}
+#case4{
+position: relative;
+top: 18.39rem;
+left: 64.72rem;
+}
+#case5{
+position: relative;
+top: 15.54rem;
+left: 63rem;
+}
+#case6{
+position: relative;
+top: 15.54rem;
+left: 62.718rem;
+}
+#case7{
+position: relative;
+top: 15.54rem;
+left: 57.979rem;
+}
+#case8{
+position: relative;
+top: 15.54rem;
+left: 54.86rem;
+}
+#case9{
+position: relative;
+top: 15.54rem;
+left: 51.7rem;
+opacity: 0.8;
+}
+
+#case10{
+position: relative;
+top: 14.14rem;
+left: 51.4rem;
+opacity: 0.8;
+}
+#case11{
+position: relative;
+top: 17rem;
+left: 49.6rem;
+}
+#case12{
+position: relative;
+top: 18.42245698rem;
+left: 47.9rem;
+}
+#case13{
+position: relative;
+top: 18.45rem;
+left: 44.7rem;
+}
+#case14{
+position: relative;
+top: 18.45rem;
+left: 41.5rem;
+opacity: 0.8;
+}
+#case15{
+position: relative;
+top: 18.45rem;
+left: 44rem;
+}
+#case16{
+position: relative;
+top: 19.96rem;
+left: 38rem;
+}
+#case17{
+position: relative;
+top: 21.4rem;
+left: 36.24rem;
+}
+#case18{
+position: relative;
+top: 22.9rem;
+left: 34.49rem;
+}
+#dix2{
+position: relative;
+left: 17.9rem;
+top:-23px;
+}
+#case19{
+position: relative;
+top: 18.47rem;
+left: 61.4rem;
+}
+#case20{
+position: relative;
+top: 18.47rem;
+left: 58.1rem;
+opacity: 0.8;
+}
+#case21{
+position: relative;
+top: 18.46rem;
+left: 60.9rem;
+}
+#case22{
+position: relative;
+top: 19.99rem;
+left: 54.65rem;
+}
+#case23{
+position: relative;
+top: 21.3rem;
+left: 52.85rem;
+}
+#case24{
+position: relative;
+top: 22.75rem;
+left: 51.15rem;
+}
+#case25{
+position: relative;
+top: 23.99rem;
+left: 49.4rem;
+}
+#case26{
+position: relative;
+top:21.3rem;
+left: 49rem;
+}
+#case27{
+position: relative;
+top: 21.3rem;
+left: 44.49rem;
+}
+#case28{
+position: relative;
+top: 21.3rem;
+left: 41.37rem;
+opacity: 0.8;
+}
+button{
+opacity: 0.8;
+border-width: 0;
+padding:10px;
+cursor: pointer;
+}
+
+#solution{
+background-color:lightseagreen;
+}
+#resolve{
+background-color: rosybrown;
+padding-top: 10px;
+}
+#check{
+background-color:firebrick;
+padding-top: 10px;
+}
+#clues{
+background-color: peru;
+padding-top: 10px;
+}
+p{
+color:white;
+font-size: 1rem;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+text-align: center;
+line-height: 36px;
+background-color:chocolate;
+opacity: 0.5;
+position:absolute;
+}
+.one{
+position: relative;
+top: 22.2rem;
+left: 69.8rem;
+}
+.two{
+position: relative;
+top: 20.79999rem;
+left: 66.9rem;
+}
+.three{
+position:relative;
+top: 20.2rem;
+left: 63.68rem;
+
+}
+.four{
+position: relative;
+top: 19.4rem;
+left: 62.6rem;
+}
+.five{
+position: relative;
+top: 20.99rem;
+left: 58rem;
+}
+.six{
+position: relative;
+top: 21rem;
+left: 55.1rem;
+}
+.popupclue{
+    width: 40%;
+    height: 40%;
+    display: none;
+    position: relative;
+    top: -470px;
+    left: 30rem;
+}
+.popupclue .popupcontent{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+background-color: rgba(255,255,255,0.5);
+
+}
+.popupclue .popupcontent ul{
+list-style: none;
+border: 5px dotted black;
+
+}
+.popupclue .popupcontent ul:nth-child(1){
+padding-right: 10px;
+
+}
+.close{
+ cursor: pointer;
+}
+.close:hover{
+background-color: firebrick;
+}
+.bravo{
+width: 300px;
+height: 300px;
+background-color: aqua;
+text-align: center;
+line-height: 8.2;
+padding-left: 29px;
+-webkit-clip-path: polygon(50% 0%, 68% 32%, 98% 35%, 74% 60%, 99% 100%, 46% 73%, 19% 98%, 26% 57%, 2% 35%, 33% 28%);
+clip-path: polygon(50% 0%, 68% 32%, 98% 35%, 74% 60%, 99% 100%, 46% 73%, 19% 98%, 26% 57%, 2% 35%, 33% 28%);
+position: relative;
+top: -599px;
+left: 500px;	
+display: flex;
+justify-content: center;
+opacity: 0.8;
+visibility: hidden;
+}
+#bravo{
+animation-name: bravoanim;
+animation-delay: 0s;
+animation-duration: 2s;
+animation-fill-mode: backwards;
+animation-iteration-count: 1;
+}
+@keyframes bravoanim{
+	0%{
+	transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+
+	}
+	25%{
+	transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+
+	}
+	50%{
+	transform: scale(2);
+	-ms-transform: scale(2);
+	-webkit-transform: scale(2);
+
+	}
+	75%{
+	transform: scale(3);
+	-ms-transform: scale(3);
+	-webkit-transform: scale(3);
+
+	}
+	90%{
+	transform: scale(4);
+	-ms-transform: scale(4);
+	-webkit-transform: scale(4);
+    }
+	100%{
+		display: none;
+	}
+}
+
+@media screen and (max-width:1224px){
+	.mycros{
+		height: 250%;
+	}
+	.content{
+	position: relative;
+    left: -50rem;
+	}
+.popupclue{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    top: -1320px;
+    left: 0rem;
+}
+.bravo{
+width: 300px;
+height: 300px;
+background-color: aqua;
+text-align: center;
+line-height: 8.2;
+padding-left: 29px;
+-webkit-clip-path: polygon(50% 0%, 68% 32%, 98% 35%, 74% 60%, 99% 100%, 46% 73%, 19% 98%, 26% 57%, 2% 35%, 33% 28%);
+clip-path: polygon(50% 0%, 68% 32%, 98% 35%, 74% 60%, 99% 100%, 46% 73%, 19% 98%, 26% 57%, 2% 35%, 33% 28%);
+position: relative;
+top: -999px;
+left: 50px;	
+display: flex;
+justify-content: center;
+opacity: 0.8;
+visibility: hidden;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
