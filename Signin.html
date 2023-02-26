@@ -120,7 +120,7 @@
       </p>
       <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
         <span>HTML Website Builder</span>
-      </a>. 
+      </a>
     </section>
     <script type="module">
       // Import the functions you need from the SDKs you need
@@ -139,7 +139,9 @@
         appId: "1:722717516267:web:6d03c2f782032edfe139ae",
         measurementId: "G-MHMNP1YLBR"
       };
-    
+if (localStorage) { // fix for API
+    localStorage.removeItem("firebase:previous_websocket_failure");
+}
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const db = getDatabase();
@@ -148,43 +150,48 @@
     
     
             const username = document.getElementById('username-a30d');
-            const pass = document.getElementById('password-a30d');
+            const password = document.getElementById('password-a30d');
             const submit = document.getElementById('sub_btn');
-    
+            const dbref = ref(db);
+
             function AuthenticateUser(){
-                const dbref = ref(db);
                 
-                get(child(dbref, "UserList/" + username.value)).then((snapshot)=> {
+                get(child(dbref, "UserList/" + username.value)).then((snapshot) => {
                     if(snapshot.exists()){
-                        let dbpass = decPass(snapshot.val().password);
-                        if(dbpass == pass.value){
-                            login(snapshot.val());
-                        }
-                        else{
-                            alert("User does not exist");
-                        }
+                        // let dbpass = decPass(snapshot.val().pass);
+                        // console.log = (snapshot.val().username);
+                        let dbpass = (snapshot.val().password);
+                        console.log = (snapshot.val());
+                        if(dbpass == password.value){
+                          let snapuser = (snapshot.val().username);
+                        login(snapuser);
                     }
                     else{
-                        alert("Username or password is invalid")
+                        alert("User does not exist");
                     }
-                });
-            }
+                }
+                else{
+                    alert("Username or password is invalid")
+                }
+                  
+                  });
+        }
     
-            function decPass(dbpass){
-                var passEnc = CryptoJS.AES.decrypt(dbpass, pass.value);
-                return passEnc.toString(CryptoJS.enc.Utf8);
-            }
-    
-            function login(user) {
-                let keepLoginIn = document.getElementById("checkbox-a30d").checked;
-                if(!keepLoginIn){
-                    sessionStorage.setItem('user', JSON.stringify(user));
-                    window.location="Home-.html";
+            //  function decPass(dbpass){
+            //     var passEnc = CryptoJS.AES.decrypt(dbpass, pass.value);
+            //     return passEnc.toString(CryptoJS.enc.Utf8);
+            // }
+    let keepLoginIn = document.getElementById("checkbox-a30d").checked;
+            function login(username) {
+              if(!keepLoginIn){
+                    sessionStorage.setItem('user', JSON.stringify(username));
+                
+                    window.location.href="Home-.html";
                 }
                 else{
                     localStorage.setItem('keepLoggedIn', 'yes');
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location= 'Home-.html';
+                    localStorage.setItem('user', JSON.stringify(username));
+                    window.location.href= 'Home-.html';
                 }
             }
     
