@@ -1,54 +1,54 @@
 let questions = [
   {
   numb: 1,
-  question: "Who is the prettiest in the world",
-  answer: "Vân Anh",
+  question: "We cannot have people ________ photos here while the movie is playing.",
+  answer: "taking",
   options: [
-    "Vân Anh",
-    "Vân Anh 1",
-    "Vân Anh 2",
-    "Vân Anh 3"
+    "taking",
+    "to take",
+    "taken",
+    "be taken"
   ]
 },
 {
   numb: 2,
-  question: "Who is the prettiest in the world",
-  answer: "Vân Anh",
+  question: "I would rather that it ________ not summer now.",
+  answer: "were",
   options: [
-    "Vân Anh",
-    "Vân Anh 1",
-    "Vân Anh 2",
-    "Vân Anh 3"
+    "be",
+    "being",
+    "were",
+    "is"
   ]
 },{
   numb: 3,
-  question: "Who is the prettiest in the world",
-  answer: "Vân Anh",
+  question: "These two young artists ________ remarkable success in the coming competition as their current performance is superb.",
+  answer: "are bound for",
   options: [
-    "Vân Anh",
-    "Vân Anh 1",
-    "Vân Anh 2",
-    "Vân Anh 3"
+    "are bound for",
+    "are quick of",
+    "make way for",
+    "make good on"
   ]
 },{
   numb: 4,
-  question: "Who is the prettiest in the world",
-  answer: "Vân Anh",
+  question: "I doubt whether the game will ever ________ with teenagers.",
+  answer: "catch on",
   options: [
-    "Vân Anh",
-    "Vân Anh 1",
-    "Vân Anh 2",
-    "Vân Anh 3"
+    "call over",
+    "fall off",
+    "catch on",
+    "sew up"
   ]
 },{
   numb: 5,
-  question: "Who is the prettiest in the world",
-  answer: "Vân Anh",
+  question: "The vice director is supposed to ________ when her boss is gone away on business. She will be responsible for solving all the company’s affairs during this period.",
+  answer: "call the shots",
   options: [
-    "Vân Anh",
-    "Vân Anh 1",
-    "Vân Anh 2",
-    "Vân Anh 3"
+    "go with the flow",
+    "call the shots",
+    "face the music",
+    "get the picture"
   ]
 },
 ];

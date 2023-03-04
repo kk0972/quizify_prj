@@ -40,13 +40,27 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home-.html" style="padding: 10px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signin.html" style="padding: 10px;">Sign In</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signup.html" style="padding: 10px;">Sign Up</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;">Ranking</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;">Practice</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;">Test</a>
-</li></ul>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+              <li class="u-nav-item">
+                <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Home</a>
+              </li>
+              <li class="u-nav-item">
+                <a id="userlink" class="u-button-style u-nav-link" href="#">UserName </a>
+              </li>
+      
+        
+              <li class="u-nav-item">
+                
+                  <a id="signoutlink" class="u-button-style u-nav-link" href="#">Sign Out </a>
+              </li>
+
+<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signin.html" style="padding: 10px;">Sign In</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Signup.html" style="padding: 10px;">Sign Up</a></li> -->
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;" href="dict.html">Dictionary</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;" href="questions.html">Quiz</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;" href="puzzle.html">Puzzle</a></li>
+<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" style="padding: 10px;" href="crosspzzl.html">Crossword</a></li> -->
+</ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
@@ -83,5 +97,55 @@
         </div>
     </div>
     <script src="dict.js"></script>
+    <script>
+      let userlink = document.getElementById('userlink');
+      let signoutlink = document.getElementById('signoutlink');
+      let header = document.getElementById('hh');
+      var currentUser = null;
+      
+      function getUserName(){
+        let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+        currentUser = JSON.parse(localStorage.getItem("user"));
+        if(keepLoggedIn == "yes"){
+        }
+        else{
+          currentUser = JSON.parse(sessionStorage.getItem("user"));
+        }
+      }
+      function Signout(){
+        sessionStorage.removeItem("user");
+        localStorage.removeItem("user");
+        localStorage.removeItem("keepLoggedIn");
+        window.location= "Home-.html";
+      }
+      window.onload = function(){
+         getUserName();
+         if(currentUser == null)
+         {
+          userlink.innerText= "Create New Account";
+          userlink.classList.replace("nav-link","btn");
+          userlink.classList.add("btn-primary");
+          userlink.href = "Signup.html";
+
+          signoutlink.classList.replace("nav-link","btn");
+          signoutlink.innerText= "Login";
+          signoutlink.classList.add("btn-primary");
+          signoutlink.href = "Signin.html";
+         }
+         else
+         {
+          userlink.innerText= currentUser.username;
+          userlink.innerText = "Welcome " + currentUser;
+          userlink.classList.replace("nav-link","btn");
+          userlink.href = "#";
+
+          userlink.classList.add("btn-primary");
+          signoutlink.innerText= "Sign Out"; 
+          signoutlink.classList.replace("nav-link","btn");
+          signoutlink.classList.add("btn-primary");
+          signoutlink.href = "javascript:Signout()";
+         }
+      }
+    </script>
 </body>
 </html>
