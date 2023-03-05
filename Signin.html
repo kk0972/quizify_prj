@@ -76,7 +76,7 @@
               <div class="u-align-center u-container-style u-layout-cell u-size-37 u-white u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
                   <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1">Welcome back</h3>
-                  <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                  <p class="u-text u-text-2"></p>
                   <img class="u-image u-image-contain u-image-default u-image-1" src="images/Untitled-2.png" alt="" data-image-width="688" data-image-height="432">
                 </div>
               </div>
@@ -90,7 +90,7 @@
                       </div>
                       <div class="u-form-group u-form-password">
                         <label for="password-a30d" class="u-label">Password *</label>
-                        <input type="text" placeholder="Enter your Password" id="password-a30d" name="password" class="u-grey-5 u-input u-input-rectangle u-input-2" required="" >
+                        <input type="password" placeholder="Enter your Password" id="password-a30d" name="password" class="u-grey-5 u-input u-input-rectangle u-input-2" required="" >
                       </div>
                       <div class="u-form-checkbox u-form-group">
                         <input type="checkbox" id="checkbox-a30d" name="remember" value="On">
@@ -115,17 +115,7 @@
     
     
     
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
-        <span>HTML Template</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
-        <span>HTML Website Builder</span>
-      </a>
-    </section>
+    
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
@@ -143,9 +133,12 @@
         appId: "1:722717516267:web:6d03c2f782032edfe139ae",
         measurementId: "G-MHMNP1YLBR"
       };
-if (localStorage) { // fix for API
+     
+        if (localStorage) { // fix for API
     localStorage.removeItem("firebase:previous_websocket_failure");
 }
+      
+
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const db = getDatabase();
